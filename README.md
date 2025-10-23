@@ -1,2 +1,2 @@
 # Ayushsutra
-herbal and ayurvedic ecommerce website
+herbal and ayurvedic ecommerce website.
