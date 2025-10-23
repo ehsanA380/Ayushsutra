@@ -12,7 +12,7 @@ function Navbar() {
                 <div className="flex-1  ">
                     <a  className="hover:text-warning hover:shadow-none hover:outline-transparent  bg-transparent outline-none btn btn-ghost text-xl">
                     <span className='mr-[-20px]'><img className='w-12 inline-block' src={logo} alt="logo" /></span>
-                        AushSutra</a>
+                        AyushSutra</a>
                 </div>
                 <div className='flex-2 justify-between space-x-4 '>
                     <Link to="/"className={`btn btn-ghost ${location.pathname === '/' ? 'bg-green-700' : ''}`}>Home</Link>
