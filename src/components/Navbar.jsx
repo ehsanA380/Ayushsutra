@@ -8,14 +8,41 @@ function Navbar() {
 
     return (
         <>
-            <div className="navbar bg-base-100 shadow-sm px-10 z-10 bg-transparent text-white">
-                <div className="flex-1  ">
-                    <a  className="hover:text-warning hover:shadow-none hover:outline-transparent  bg-transparent outline-none btn btn-ghost text-xl">
-                    <span className='mr-[-20px]'><img className='w-12 inline-block' src={logo} alt="logo" /></span>
+            <div className="navbar bg-base-100 shadow-sm px-10 z-10 bg-transparent   text-white">
+                <div className='flex-0 md:hidden'>
+                    <label className=" swap swap-rotate">
+                        {/* this hidden checkbox controls the state */}
+                        <input type="checkbox" />
+
+                        {/* hamburger icon */}
+                        <svg
+                            className="swap-off fill-current"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 512 512">
+                            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                        </svg>
+
+                        {/* close icon */}
+                        <svg
+                            className="swap-on fill-current"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 512 512">
+                            <polygon
+                                points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+                        </svg>
+                    </label>
+                </div>
+                <div className="flex-1 m-0 ">
+                    <a className="hover:text-warning hover:shadow-none hover:outline-transparent pr-3 p-0  bg-transparent outline-none btn btn-ghost text-xl">
+                        <span className='mr-[-20px]'><img className='w-12 inline-block' src={logo} alt="logo" /></span>
                         AyushSutra</a>
                 </div>
-                <div className='flex-2 justify-between space-x-4 '>
-                    <Link to="/"className={`btn btn-ghost ${location.pathname === '/' ? 'bg-green-700' : ''}`}>Home</Link>
+                <div className='flex-2 justify-between hidden space-x-4 md:block '>
+                    <Link to="/" className={`btn btn-ghost ${location.pathname === '/' ? 'bg-green-700' : ''}`}>Home</Link>
                     <Link className={`btn btn-ghost ${location.pathname === '/product' ? 'bg-green-700' : ''}`} to={'/product'} >Product</Link>
                     <Link className={`btn btn-ghost ${location.pathname === '/services' ? 'bg-green-700' : ''}`} to={'/services'}>Services</Link>
                     <Link className={`btn btn-ghost ${location.pathname === '/about' ? 'bg-green-700' : ''}`} to={'/about'}>About</Link>
